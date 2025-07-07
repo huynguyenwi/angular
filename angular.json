@@ -19,7 +19,8 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              }
+              },
+              "src/assets"
             ],
             "styles": [
               "src/styles.css"
@@ -77,8 +78,8 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              }
-            ],
+              }             
+            ], 
             "styles": [
               "src/styles.css"
             ]
@@ -86,5 +87,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "88a134ba-3088-4190-9081-e4c4bf4f8bb3"
   }
 }

@@ -1,0 +1,64 @@
+<div class="wrapper-cart">
+
+    <h1>Create Product</h1>
+
+    <!-- <div style="width: 70%; margin: auto; background-color: #fff; padding: 1rem; border-radius: 8px;">
+        <div class="form-control">
+        <label for="name">Name:</label>
+        <div>
+            <input type="text" id="name" [formControl]="name"/>
+        </div>
+    </div>
+     <div class="form-control">
+        <label for="price">Price:</label>
+        <div>
+            <input type="text" id="price" [formControl]="price"/>
+        </div>
+    </div>
+    <div class="form-control">
+        <div class="btn-navigation"
+        (click)="handleAddCart()"
+         style="padding: 0.8rem; color: #fff; margin-top: .4rem;">
+            Add to card
+        </div>
+    </div>
+</div> -->
+
+    <!-- bài 30: Form control -->
+    <!-- [formGroup]="product" -->
+    <form [formGroup]="product">
+        <div style="width: 70%; margin: auto; background-color: #fff; padding: 1rem; border-radius: 8px;">
+            <div class="form-control">
+                <label for="name">Name:</label>
+                <div>
+                    <input type="text" id="name" formControlName="name" />
+                </div>
+                <!-- B31 validate form -->
+                <div *ngIf="name?.dirty || name?.touched">
+                    <div style="color: #a63b3b;" *ngIf="name?.hasError('required')">
+                    Name is required
+                </div>
+                </div>
+
+            </div>
+            <div class="form-control">
+                <label for="price">Price:</label>
+                <div>
+                    <input type="text" id="price" formControlName="price" />
+                </div>
+
+                <div *ngIf="price?.dirty || price?.touched">
+                    <div style="color: #a63b3b;" *ngIf="price?.hasError('required')">
+                    Price is required
+                </div>
+                </div>
+            </div>
+            <div class="form-control">
+                <div class="btn-navigation" (click)="handleAddCart()"
+                    style="padding: 0.8rem; color: #fff; margin-top: .4rem;">
+                    Add to card
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
